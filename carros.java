@@ -8,7 +8,7 @@ public class carros {
         this.color = colorcarro;
     }
     public void presentar() {
-        System.out.println("Este nuevo " + marca + " , es de tipo: " + tipo + " y con su lindo y clasico color " + color + (" es de los mejores autos del mundo.") );
+        System.out.println("Este nuevo " + marca + ", es de tipo: " + tipo + " y con su lindo y clasico color " + color + (" es de los mejores autos del mundo.") );
     }
     public static void main(String[] args) {
         carros carronuevo= new carros("lamborghini", "automatico", "negro mate");
