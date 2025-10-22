@@ -1,5 +1,5 @@
 public class Mascota { // Nombre de clase debe ser el mismo del archivo     // Atributo privado
-    private String nombre;
+    public String nombre;
     private String tipo;
     private String color;
     // Constructor
@@ -15,7 +15,7 @@ public class Mascota { // Nombre de clase debe ser el mismo del archivo     // A
     }
     public static class tipoanimalmascota extends Mascota {
         private String animal;
-
+//constructor de la superclase
     public tipoanimalmascota(String nombre, String tipo, String color, String animal){
         super(nombre, tipo, color);
         this.animal = animal;
@@ -24,6 +24,17 @@ public class Mascota { // Nombre de clase debe ser el mismo del archivo     // A
         System.out.println("y soy un " + animal);
     }
 }
+    public static class mascotapolicia extends Mascota {
+        private String especialidad;
+        public mascotapolicia (String nombre, String tipo, String color, String especialidad){
+            super(nombre, tipo, color);
+            this.especialidad=especialidad;
+        }
+        @Override
+        public void saludar (){
+            System.out.println("Alto! soy " + nombre + " y mi especialidad es " + especialidad);
+        }
+    }
     // Método main para ejecutar el programa
     public static void main(String[] args) {
         Mascota mascotahija = new Mascota("Kairos", "Doberman", "Beige"); //llamo al constructor 
@@ -34,5 +45,7 @@ public class Mascota { // Nombre de clase debe ser el mismo del archivo     // A
         tipoanimalmascota mascotaconraza = new tipoanimalmascota ("max", "labrador", "marron", "perro");
         mascotaconraza.saludar();
         mascotaconraza.definiranimal();
+        mascotapolicia mascotavigilante = new mascotapolicia("tobi", "Doberman", "negro", "antinarcoticos");
+        mascotavigilante.saludar();
     }
 }
